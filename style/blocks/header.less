@@ -1,0 +1,305 @@
+//main: ../main.less
+
+header {
+    background-image: linear-gradient(rgba(233, 222, 212, .85),rgba(233, 222, 212, .85)),url("../images/header/background.jpg");
+
+    width: 100%;
+    height: 700px;
+
+    overflow: hidden;
+
+    @media screen and (max-width:1320px) {
+        height: 750px;
+    }
+
+}
+
+.wrapper {
+    z-index: 1;
+    width: 1320px;
+    height: 700px;
+    
+    margin: 0 auto;
+    padding-left: 72px;
+    padding-right: 72px;
+    padding-top: 28.31px;
+
+    
+    position: relative;
+    
+    img {
+        position: absolute;
+    }
+    
+    .round {
+        width: 660px;
+        height: 660px;
+
+        position: absolute;
+        top: -44px;
+        left: 651px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: fade( #FBCE51,85%);
+        mix-blend-mode: multiply;
+        border-radius: 50%;
+
+        img {
+            width: 770px;
+            height: 770px;
+            top: -53px;
+            mix-blend-mode: overlay;
+        }
+        z-index: 2;
+    }
+    .chess1 {
+        width: 147px;
+        height: 266px;
+
+        left: 1021px;
+        top: 159px;
+        z-index: 3;
+    }
+    .chess2 {
+        width: 131px;
+        height: 266px;
+
+        left: 684px;
+        top: 265px;
+        z-index: 3;
+    }
+    .city {
+        width: 1624px;
+        height: 430px;
+
+        left: -158px;
+        top: 270px;
+        
+        z-index: 4;
+    }
+    .chess3 {
+        width: 197px;
+        height: 218px;
+
+        left: 793px;
+        top: 482px;
+        z-index: 5;
+    }
+    .chess4 {
+        width: 83px;
+        height: 123px;
+
+        left: 1269px;
+        top: 542px;
+        z-index: 5;
+    }
+    .path {
+        width: 1605px;
+        height: 441px;
+
+        left: -163px;
+        top: 259px;
+        
+        z-index: 4;
+    }
+
+    
+
+    @media screen and (max-width:1320px) {
+        width: 375px;
+        height: 750px;
+        padding-top: 18px;
+        padding-left: 20px;
+        padding-right: 20px;
+    
+        .round {
+            width: 349px;
+            height: 349px;
+            left: 0px;
+            top: 425px;
+            img {
+                width: 402px;
+                height: 402px;
+                top: -25px;
+            }
+        }
+        .chess1 {
+            width: 65.4px;
+            height: 116.98px;
+
+            left: 237px;
+            top: 500px;
+        }
+        .chess2 {
+            width: 55.44px;
+            height: 116.98px;
+
+            left: 55px;
+            top: 526px;
+        }
+        .city {
+            width: 885.53px;
+            height: 213.81px;
+
+            left: -404px;
+            top: 536px;
+        }
+        .chess3 {
+            width: 116.7px;
+            height: 121.63px;
+
+            left: 135px;
+            top: 629px;
+        }
+        .chess4 {
+            width: 49px;
+            height: 76px;
+
+            left: 367px;
+            top: 656px;
+        }
+        .path {
+            width: 874.73px;
+            height: 214px;
+
+            left: -407px;
+            top: 532px;
+        }
+    }
+}
+
+.logo {
+
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 700;
+    font-size: 16.65px;
+    line-height: 17.98px;
+
+    color: #595653;
+
+    display: flex;
+    gap: 1.73px;
+    & img {
+        position: relative;
+        width: 21.65px;
+        height: 31.18px;
+    }
+    & span {
+        margin-left: 4.62px;
+    }
+}
+
+.content {
+    width: 542px;
+    margin-top: 62px;
+
+    position: relative;
+    z-index: 10;
+
+    .headline {
+        width: 100%;
+        word-wrap: normal;
+    
+        display: flex;
+        flex-direction: column;
+    
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 66px;
+    
+        & :nth-child(2) {
+            padding-left: 91px;
+        }
+        & :nth-child(3) {
+            text-align: right;
+        }
+    }
+
+    .notice {
+        margin-top: 24px;
+
+        font-family: 'Golos Text', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23.4px;
+        text-align: center;
+
+    }
+
+    .btns {
+        margin-top: 40px;
+
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+
+        button {
+            width: 100%;
+            height: 72px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+            
+            font-family: 'Golos Text', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20.8px;
+            text-align: center;
+
+            border-radius: 66px;
+            border: 2px solid #1F1F1F;
+
+            transition: var(--transition);
+        }
+        .main {
+            background: #1F1F1F;
+            color: #FFF;
+            &:hover {
+                background: var(--yellow);
+                border: 2px solid var(--yellow);
+                color: #1F1F1F;
+            }
+        }
+        .second {
+            background: transparent;
+            color: #1F1F1F;
+            &:hover {
+                background: #1F1F1F;
+                color: #FFF;
+            }
+        }
+    }
+
+    @media screen and (max-width:1320px) {
+        width: 335px;
+        margin-top: 40px;
+        .headline {
+            font-size: 36px;
+            line-height: 39.6px;
+        }
+        .notice {
+            text-align: left;
+
+        }
+        .btns {
+            flex-direction: column;
+        }
+        
+        .btns button {
+            height: 47px;
+            padding: 18px, 20px, 18px, 20px;
+            border:  none;
+        }
+        .btns .second {
+            background: fade(#FFF, 90%);
+        }
+    }
+}
+
+

@@ -1,0 +1,40 @@
+// main: ../main.less
+.line {
+    background: var(--accent-color);
+    height: 60px;
+    width: auto;
+
+    white-space: nowrap;
+    overflow: hidden;
+
+    padding: 18px 12px;
+
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 24.2px;
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 1320px) {
+        height: 38px;
+        padding: 10px 12px;
+        
+        font-size: 16px;
+        line-height: 17.6px;
+    }
+}
+
+.running {
+    animation: run 10s linear infinite;
+}
+
+@keyframes run {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

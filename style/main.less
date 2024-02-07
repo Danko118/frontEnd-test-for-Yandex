@@ -1,0 +1,121 @@
+// compress: true
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    color: #313131;
+    overflow-x: hidden;
+  }
+  
+  :root {
+    --accent-color: #F54932;
+    --yellow: #FBCE51;
+    --blue: #3057A2;
+  
+    --transition: 0.2s all cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  .cross {
+    width: auto;
+    display: block;
+    position: relative;
+  }
+  
+  .cross::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 81px;
+    height: 2px;
+    background: var(--accent-color);
+  }
+  
+  ul,
+  ol,
+  nav,
+  menu {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+  }
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    border: none;
+  }
+  input{
+    outline: none;
+    outline-offset: 0;
+  }
+  input:active,
+  input:hover,
+  input:focus{
+    outline: none;
+    outline-offset: 0;
+  }
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    padding: 0;
+  }
+  button:focus {
+    outline: none;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  
+  .btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #313131;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: var(--transition);
+    &:disabled {
+        pointer-events: none;
+        background: #D6D6D6;
+    }
+    &:hover {
+        background: var(--yellow);
+    }
+  }
+  .reverse {
+    transform: rotate(180deg)
+  }
+
+  @import "blocks/footer";
+  @import "blocks/header";
+  @import "blocks/line";
+  @import "blocks/support";
+  @import "blocks/tournament";
+  @import "blocks/stages";
+  @import "blocks/members";

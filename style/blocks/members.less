@@ -1,0 +1,118 @@
+// main: ../main.less
+
+.members {
+    width: 1320px;
+    margin: 200px auto 140px auto;
+    position: relative;
+
+    padding: 0 72px;
+
+    .title {
+        font-size: 54px;
+        line-height: 64.8px;
+    }
+
+    .nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        margin-top: 10px;
+        .pages {
+            font-family: 'Golos Text', sans-serif;
+            font-size: 16px;
+            line-height: 19.2px;
+            color: #838383;
+        }
+        #page {
+            color: #313131;
+        }
+    }
+
+    .memberSlides {
+        width: auto;
+        margin-top: 60px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        transition: var(--transition);
+        .card {
+            min-width: 394px;
+            height: 462px;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Golos Text', sans-serif;
+
+            img {
+                margin: 0 37px;
+                margin-bottom: 28px;
+            }
+            .name {
+                color: #313131;
+                font-size: 24px;
+                line-height: 28.8px;
+                margin-bottom: 6px;
+            }
+            .regards {
+                color: #838383;
+                font-size: 20px;
+                line-height: 24px;
+                margin-bottom: 20px;
+            }
+
+            .moreInfo {
+                width: 113px;
+                height: 35px;
+                border-radius: 62px;
+                border: 2px solid #3057A2;
+                color: #3057A2;
+
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19.2px;
+
+                transition: var(--transition);
+                &:hover {
+                    background: #3057A2;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:1320px) {
+        width: 375px;
+        margin: 120px auto 176px auto;
+
+        padding: 0 20px;
+        .memberSlides {
+            gap: 32px;
+
+            .card {
+                min-width: 335px;
+                height: 388px;
+    
+                img {
+                    margin: 0 45px 28px 45px;
+                    width: 244px;
+                    height: 244px;
+                }
+                .name {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+        .nav {
+            width: 100%;
+            top: 607px;
+        }
+    }
+}

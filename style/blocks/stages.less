@@ -1,0 +1,183 @@
+// main: ../main.less
+
+.stages {
+    width: 1320px;
+    margin: 200px auto 0 auto;
+    position: relative;
+
+    padding: 0 72px;
+    .title {
+        display: inline-block;
+        width: 806px;
+        font-weight: 400;
+        font-size: 54px;
+        line-height: 64.8px;
+        text-transform: uppercase;
+        .subtitle {
+            display: inline-block;
+            text-transform: none;
+            width: 280px;
+            height: 48px;
+            text-wrap: wrap;
+            font-family: 'Golos Text', sans-serif;
+            font-weight: 400;
+            color: #3057A2;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+
+    .plane {
+        position: absolute;
+        bottom: 0;
+        right: -30px;
+        z-index: 10;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .stage {
+        height: auto;
+        margin-top: 64px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        transition: var(--transition);
+        
+        .block {
+            width: 394px;
+            height: 112px;
+
+            background: url("../../images/stages/background.png");
+            background-position: left;
+
+            padding: 20px;
+            display: flex;
+            gap: 16px;
+
+            font-family: 'Golos Text', sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            & .number {
+                position: relative;
+                min-width: 36px;
+                height: 36px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                background: #FFF;
+                border-radius: 50%;
+                font-weight: 600;
+            }
+            & .text { 
+                position: relative;
+                width: 302px;
+            }
+        }
+
+        & :nth-child(1) { grid-area: 1 / 1 / 2 / 2; }
+        & :nth-child(2) { 
+            grid-area: 1 / 2 / 2 / 3; }
+        & :nth-child(3) { 
+            height: 244px;
+            grid-area: 1 / 3 / 3 / 5; 
+        }
+        & :nth-child(4) { grid-area: 2 / 1 / 3 / 2; }
+        & :nth-child(5) { grid-area: 2 / 2 / 3 / 3; }
+        & :nth-child(6) { 
+            height: 136px;
+            grid-area: 3 / 1 / 4 / 2; 
+        }
+        & :nth-child(7) { 
+            width: 806px;
+            height: 136px;
+            grid-area: 3 / 2 / 4 / 5; 
+            & .text {
+                width: 416px;
+            }
+        }
+    }
+    @media screen and (max-width:1320px) {
+        width: 375px;
+        padding: 0 20px;
+        margin-top: 120px;
+        .title {
+            width: 335px;
+            font-size: 36px;
+            line-height: 39.6px;
+            .subtitle {
+                width: 335px;
+                font-size: 18px;
+                line-height: 21.6px;
+            }
+        }
+        .plane {
+            top: 140px;
+        }
+        .nav {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            margin-top: 28px;
+            .pages {
+                display: flex;
+                gap: 6px;
+                .page {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    transition: var(--transition);
+                    background: #D6D6D6;
+                }
+                .selected {
+                    background: #313131;
+                }
+            }
+        }
+        .stage {
+            margin-top: 148px;
+            position: relative;
+            .block {
+                position: relative;
+                width: 335px;
+                height: 300px;
+                padding-top: 62px;
+                .text {
+                    top: 0;
+                    position: relative;
+                    font-size: 18px;
+                    line-height: 21.6px;
+                }
+            }
+
+            & :nth-child(1) { grid-area: 1 / 1 / 2 / 2; }
+            & :nth-child(2) { 
+
+                background: transparent;
+                margin: 0;
+                top:  -194px;
+                position: absolute;
+                grid-area: 2 / 1 / 3 / 2; 
+            }
+            & :nth-child(3) { grid-area: 1 / 2 / 2 / 3; }
+            & :nth-child(4) { grid-area: 1 / 3 / 2 / 4; }
+            & :nth-child(5) { 
+                background: transparent;
+                margin: 0;
+                top:  -194px;
+                position: absolute;
+                grid-area: 2 / 3 / 3 / 4; 
+            }
+            & :nth-child(6) { grid-area: 1 / 4 / 2 / 5; }
+            & :nth-child(7) { grid-area: 1 / 5 / 2 / 6; }
+        }
+    }
+}

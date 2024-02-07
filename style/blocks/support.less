@@ -1,0 +1,62 @@
+// main: ../main.less
+.support {
+    position: relative;
+
+    margin: 80px auto 26px auto;
+
+    width: 1320px;
+    height: 250px;
+
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 48.6px;
+
+    text-transform: uppercase;
+
+
+    span {
+        font-weight: 700;
+        color: var(--accent-color);
+    }
+
+    padding: 0 72px;
+        
+    .text1,.text2 { 
+        padding-top: 26px;
+        width: 764px;
+        height: 100px;
+    }
+    img { 
+        position: absolute; 
+        right: 72px;
+        top: 0;
+    } 
+    
+    @media screen and (max-width:1320px) {
+        width: 375px;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 20px;
+        margin: 40px auto 34px auto;
+        
+        font-size: 28px;
+        line-height: 37.8px;
+        text-wrap: wrap;
+
+        .text1,.text2 {
+            width: 325px;
+            height: auto;
+            padding-top: 0;
+        }
+        img {
+            width: 335px;
+            height: 212.56px;
+            position: relative;
+            right: 0;
+        }
+        
+    }
+}

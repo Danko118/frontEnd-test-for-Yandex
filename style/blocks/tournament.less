@@ -1,0 +1,135 @@
+// main: ../main.less
+
+.tournamentContent {
+    width: 1320px;
+    height: 528px;
+
+    margin: 64px auto 26px auto;
+
+    padding: 0 72px;
+
+    img {
+        width: 609px;
+        height: 561px;
+    }
+
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+
+    font-size: 36px;
+    line-height: 48.6px;
+    font-weight: 400;
+    
+    .title {
+        width: 100%;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 48.6px;
+        text-transform: uppercase;
+    
+        span {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+        
+    }
+
+    .addInfo {
+        margin-top: 48px;
+    
+        font-family: 'Golos Text', sans-serif;
+        font-weight: 400;
+        color: #3057A2;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    @media screen and (max-width:1320px) {
+        width: 375px;
+        height: auto;
+        margin: 34px auto 26px auto;
+        flex-direction: column;
+        padding: 0 20px;
+
+        img {
+            width: 335px;
+            height: 402px;
+        }
+        .title {
+            font-size: 28px;
+            line-height: 37.8px;
+
+        }
+        .addInfo {
+            margin-top: 40px;
+        
+            font-size: 18px;
+            line-height: 21.6px;
+        }
+    }
+
+}
+
+
+
+.table {
+    width: 704px;
+    height: auto;
+
+    margin-top: 60px;
+
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    .row {
+        border-bottom: 2px solid #D0D0D0;
+        display: flex;
+        flex-direction: row;
+    }
+    & :first-child {
+        & div {
+            padding-top: 0;
+        }
+    }
+    & :last-child {
+        border-bottom: none;
+        & div {
+            padding-bottom: 0;
+        }
+    }
+
+    .first {
+        padding: 16px 0;
+        margin-right: 16px;
+        color: #6f6f6f;
+        width: 290px;
+    }
+
+    .second {
+        width: 290px;
+        display: flex;
+        padding: 16px;
+        color: #313131;
+        font-weight: 600;
+        border-left: 2px solid #D0D0D0;
+        gap: 12px;
+    }
+    @media screen and (max-width:1320px) {
+        .row {
+            width: 335px;
+            flex-direction: column;
+        }
+        .first {
+            width: auto;
+            padding: 16px 0 12px 0;
+        }
+        .second {
+            border: none;
+            padding: 0 0 16px 0;
+        }
+    }
+}
+
